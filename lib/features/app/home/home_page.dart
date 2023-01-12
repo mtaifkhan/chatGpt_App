@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
                 ),
                 HomeButtonWidget(
                   textData: "Text Completion - OpenAI",
-                  iconData: Icons.image_outlined,
+                  iconData: Icons.text_fields_outlined,
                   onTap: () {
                     Navigator.pushNamed(
                         context, PageConst.TextCompletationPage);
@@ -44,7 +44,10 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-            Text("ChatGpT : Optimizing Language Models")
+            const Text(
+              "ChatGpT : Optimizing Language Models for Dialogues",
+              style: TextStyle(color: Colors.grey, fontSize: 12),
+            )
           ],
         ),
       ),

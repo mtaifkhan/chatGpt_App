@@ -1,4 +1,4 @@
-import 'package:chat_gpt/features/text_completition/presentation/pages/text_completation_page.dart';
+import 'package:chat_gpt/features/text_completion/presentation/pages/text_completation_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../image_generation/presentation/pages/image_generation_page.dart';
