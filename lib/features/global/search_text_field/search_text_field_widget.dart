@@ -71,7 +71,7 @@ class SearchTextFieldWidget extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: textEditingController.text == null
+                color: textEditingController.text.isEmpty
                     ? Colors.green.withOpacity(0.4)
                     : Colors.blue,
               ),

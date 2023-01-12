@@ -15,7 +15,8 @@ class ImageGenerationDataSourceImpl implements ImageGenerationDataSource {
 
   @override
   Future<ImageGenerationModel> getGeneratedImages(String query) async {
-    final String _endPoint = "images/enerations";
+    // ignore: no_leading_underscores_for_local_identifiers
+    const String _endPoint = "images/generations";
 
     // there types of pixels we can pass
     //256x256  ,, 512x512 , 1021x1024

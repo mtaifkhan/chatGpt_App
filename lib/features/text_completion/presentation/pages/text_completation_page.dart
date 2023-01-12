@@ -19,6 +19,7 @@ class _TextCompletationPageState extends State<TextCompletationPage> {
   @override
   void initState() {
     _searchTextController.addListener(() {});
+    setState(() {});
     super.initState();
   }
 

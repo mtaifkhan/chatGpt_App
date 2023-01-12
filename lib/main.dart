@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:chat_gpt/core/http_certificate_manager.dart';
 import 'package:chat_gpt/features/app/splash/splash_screen.dart';
+import 'package:chat_gpt/features/image_generation/presentation/cubit/image_generation_cubit.dart';
 import 'package:chat_gpt/features/text_completion/presentation/cubit/text_completion_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -27,6 +28,9 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider<TextCompletionCubit>(
           create: (_) => di.sl<TextCompletionCubit>(),
+        ),
+        BlocProvider<ImageGenerationCubit>(
+          create: (_) => di.sl<ImageGenerationCubit>(),
         ),
       ],
       child: MaterialApp(

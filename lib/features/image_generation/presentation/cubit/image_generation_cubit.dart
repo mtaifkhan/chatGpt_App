@@ -1,5 +1,6 @@
-import 'dart:io';
+// ignore_for_file: depend_on_referenced_packages
 
+import 'dart:io';
 import 'package:bloc/bloc.dart';
 import 'package:chat_gpt/core/custom_excetion.dart';
 import 'package:chat_gpt/features/image_generation/data/model/image_generation_model.dart';
@@ -14,10 +15,11 @@ class ImageGenerationCubit extends Cubit<ImageGenerationState> {
       : super(ImageGenerationInitial());
 
   Future<void> imageGenerate({required String query}) async {
-    emit(ImageGenerationInitial());
+    emit(ImageGenerationLoading());
     try {
       final imageGenerationModelDatas =
           await imageGenerationUseCase.call(query);
+
       emit(ImageGenerationLoaded(
           imageGenerationModelData: imageGenerationModelDatas));
     } on SocketException catch (e) {

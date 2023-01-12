@@ -7,6 +7,7 @@ class ImageGenerationUseCase {
   ImageGenerationUseCase({required this.repository});
 
   Future<ImageGenerationModel> call(String query) {
+    print("I am called");
     return repository.getGeneratedImage(query);
   }
 }
